@@ -34,19 +34,7 @@ namespace Test_Task_2.Models
 						Id = 3,
 						Name = "Saw",
 						Category = CategoryType.Video
-					},
-					new Product
-					{
-						Id = 4,
-						Name = "Eminem",
-						Category = CategoryType.Music
-					},
-					new Product
-					{
-						Id = 5,
-						Name = "Falling stars",
-						Category = CategoryType.Video
-					},
+					}
 				}
 			);
 			base.OnModelCreating(modelBuilder);
