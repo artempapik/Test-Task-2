@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Test_Task_2.Models;
 using System.Linq;
+using System;
 
 namespace Test_Task_2.Controllers
 {
@@ -17,6 +18,9 @@ namespace Test_Task_2.Controllers
 					.ToList();
 			}
 		}
+
+		[HttpGet("categories")]
+		public IEnumerable<string> GetCategories() => Enum.GetNames(typeof(CategoryType)).Cast<string>();
 
 		[HttpPost]
 		public IActionResult Post([FromBody]Product product)
