@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ProductDataService } from './services/product-data.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { AppComponent } from './app.component';
       { path: '', component: AppComponent },
     ])
   ],
-  providers: [],
+  providers: [
+    ProductDataService
+  ],
   bootstrap: [AppComponent]
 })
 
