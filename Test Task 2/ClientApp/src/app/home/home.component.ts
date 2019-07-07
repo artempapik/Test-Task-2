@@ -1,7 +1,6 @@
 import { ProductDataService } from '../services/product-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../services/product';
-import { CategoryType } from '../services/category-type';
 
 @Component({
   selector: 'home',
