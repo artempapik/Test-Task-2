@@ -9,8 +9,8 @@
         <input class="form-control" [(ngModel)]="product.name" #name="ngModel" required minlength="3" />
       </div>
       <div class="mb-10">
-        <select class="custom-select" (change)="changeCategory($event.target.value)">
-          <option value="Text" selected>Text</option>
+        <select class="custom-select" [(ngModel)]="category">
+          <option value="Text">Text</option>
           <option value="Music">Music</option>
           <option value="Video">Video</option>
         </select>

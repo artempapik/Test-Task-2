@@ -10,29 +10,14 @@ import { Component } from '@angular/core';
 
 export class AddProductComponent {
   product: Product = new Product();
-  category: string;
+  category: string = 'Text';
 
   constructor(
     private productDataService: ProductDataService
   ) { }
 
-  changeCategory(category: string) {
-    this.category = category;
-  }
-
   addProduct() {
-    switch (this.category) {
-      case 'Text':
-        this.product.category = CategoryType.Text;
-        break;
-      case 'Music':
-        this.product.category = CategoryType.Music;
-        break;
-      case 'Video':
-        this.product.category = CategoryType.Video;
-        break;
-    }
-
+    this.product.category = CategoryType[this.category];
     this.productDataService
       .createProduct(this.product)
       .subscribe();
