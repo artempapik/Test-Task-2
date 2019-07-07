@@ -6,7 +6,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text">Name</span>
         </div>
-        <input class="form-control" [(ngModel)]="product.name" />
+        <input class="form-control" [(ngModel)]="product.name" #name="ngModel" required minlength="3" />
       </div>
       <div class="mb-10">
         <select class="custom-select" (change)="changeCategory($event.target.value)">
@@ -16,7 +16,7 @@
         </select>
       </div>
       <div class="text-center">
-        <button class="btn btn-primary" (click)="addProduct()" routerLink="/">
+        <button class="btn btn-primary" [disabled]="name.invalid" (click)="addProduct()" routerLink="/">
           Add
         </button>
       </div>
