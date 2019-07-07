@@ -19,7 +19,7 @@ namespace Test_Task_2.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Post(Product product)
+		public IActionResult Post([FromBody]Product product)
 		{
 			using (var db = new ApplicationContext())
 			{

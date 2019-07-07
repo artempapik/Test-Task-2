@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input class="form-control" [(ngModel)]="product.name" />
+      </div>
+      <div class="mb-10">
+        <select class="custom-select" (change)="changeCategory($event.target.value)">
+          <option value="Text" selected>Text</option>
+          <option value="Music">Music</option>
+          <option value="Video">Video</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" (click)="addProduct()" routerLink="/">
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

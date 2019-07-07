@@ -1,6 +1,5 @@
-import { ProductDataService } from './services/product-data.service';
 import { Component, OnInit } from '@angular/core';
-import { Product } from './services/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app',
@@ -8,15 +7,11 @@ import { Product } from './services/product';
 })
 
 export class AppComponent implements OnInit {
-  products: Product[];
-
   constructor(
-    private productDataService: ProductDataService
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.productDataService
-      .getProducts()
-      .subscribe((data: Product[]) => this.products = data);
+    this.router.navigate(['home']);
   }
 }

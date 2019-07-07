@@ -1,24 +1,7 @@
-<div class="container">
+<div class="container mt-10">
   <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">
-      <div *ngFor="let product of products">
-        <div class="text-center alert alert-secondary">
-          {{product?.name}}
-        </div>
-        <div class="text-center alert alert-primary" [ngSwitch]="product?.category">
-          <span *ngSwitchCase="0">Text</span>
-          <span *ngSwitchCase="1">Music</span>
-          <span *ngSwitchCase="2">Video</span>
-        </div>
-        <hr />
-        <br />
-      </div>
-      <div class="text-center">
-        <button class="btn btn-primary" routerLink="add-product">
-          Add product
-        </button>
-      </div>
+    <div class="col">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
