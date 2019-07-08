@@ -31,6 +31,7 @@
     <None Remove="ClientApp\src\app\services\category-type.ts" />
     <None Remove="ClientApp\src\app\services\product-data.service.ts" />
     <None Remove="ClientApp\src\app\services\product.ts" />
+    <None Remove="ClientApp\src\app\services\share-data.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +40,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\services\category-type.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\product-data.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\product.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\share-data.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

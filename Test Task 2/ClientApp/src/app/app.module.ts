@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProductDataService } from './services/product-data.service';
 import { AddProductComponent } from './add-product/add-product.component';
 import { HomeComponent } from './home/home.component';
+import { ShareDataService } from './services/share-data.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     HomeComponent
   ],
   providers: [
-    ProductDataService
+    ProductDataService,
+    ShareDataService
   ],
   bootstrap: [AppComponent]
 })
